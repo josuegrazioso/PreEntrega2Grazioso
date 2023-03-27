@@ -1,0 +1,200 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@import url('https://fonts.googleapis.com/css2? family= Work+Sans:wght@100 & display=swap');
+.body{
+    font-family: 'Work Sans', sans-serif;
+}
+/*navegador*/
+.nav{
+    background-color: #440099;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav .logo{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+.nav a{
+    display: block;
+    color: white;
+    font-size: 25px;
+    text-decoration: none;
+    padding: 0px 30px;
+}
+.nav ul{
+    list-style: none;
+    display: flex;
+    object-fit: end;
+}
+.fa-bars{
+    display: none;
+}
+@media(max-width:650px){
+    .fa-bars{
+        display: block;
+        font-size: 30px;
+        margin: 10;
+        color: white;
+        padding: 0px 20px;
+    }
+    .fa-bars:hover + ul{
+        right: 0;
+    }
+    .nav ul:hover{
+        right: 0;
+    }
+    .nav ul{
+        right: -350px;
+        top: 0;
+        position: fixed;
+        background-color: white;
+        width: 250px;
+        height: 100vh;
+        z-index: 5;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        transition: 0.5s;
+    }
+    .nav a{
+        color:black;
+        padding: 10px;
+    }
+}
+/*fin navegador*/
+
+/*main*/
+.img-fluid{
+   width: 100% ;
+   object-fit: cover;
+   display: flex;
+}
+.tarjeta-s23{
+    border: solid 2px;
+    border-radius: 20px;
+    width: 300px;
+    height: 440px;
+    margin: 15px;
+}
+.boton{
+    width: 150px;
+    /*border-radius: 20px;*/
+    font-size: 15px;
+    background-color: white;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+.boton:hover{
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+}
+.cajas{
+    margin-bottom: 200px;
+}
+@media(max-width:500px){
+    .cajas{
+        padding: 20px;
+    }
+}
+/*fin main*/
+
+/*footer*/
+.footer{
+    background-color: #440099;
+    color: white;
+}
+.redes a i{
+    color: white;
+    font-size: 30px;
+    padding: 10px;
+    text-align: center;
+    margin-top: 30px;
+}
+.footer-productos{
+    margin-top: 100px;
+}
+/*fin footer*/
+/*Formulario de contactos*/
+.formulario{
+    width: 700px;
+    height: 400px;
+    background-color: #440099;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 300px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "Contacto      Contacto"
+                         "Nombre        Email"
+                         "Tel           Asunto"
+                         "Mensaje       Mensaje"
+                         "boton         boton";
+}
+.formulario h2{
+    grid-area: Contacto;
+    color: white;
+    padding: 10px;
+}
+.formulario label{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    padding: 10px;
+}
+.formulario label input , .formulario label textarea{
+    background-color: #440099;
+    border: none;
+    border-bottom: 1px solid white;
+    color: white;
+}
+.formulario label:nth-child(2){
+    grid-area: Nombre;
+}
+.formulario label:nth-child(3){
+    grid-area: Email;
+}
+.formulario label:nth-child(4){
+    grid-area: Tel;
+}
+.formulario label:nth-child(5){
+    grid-area: Asunto;
+}
+.formulario label:nth-child(6){
+    grid-area: Mensaje;
+} 
+.formulario button{
+    grid-area: boton;
+    background-color: white;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+.formulario button:hover{
+    background-color: black;
+    border-radius: 20px;
+    color: white;
+}
+@media(max-width:703px){
+    .formulario{
+    width: auto;
+    height: auto;
+    margin: 200px 10px;
+    grid-template-columns: 1fr;
+    grid-template-areas: "Contacto"
+                         "Nombre"
+                         "Email"
+                         "Tel"       
+                         "Asunto"
+                         "Mensaje"
+                         "boton";
+    }
+}
+/*fin de Formulario de contactos*/
